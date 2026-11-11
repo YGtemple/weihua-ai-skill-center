@@ -535,6 +535,10 @@
     .footer-links button { min-height: 44px; padding: 0; border: 0; color: #c4c8d0; background: transparent; font-size: 14px; cursor: pointer; text-decoration: underline; text-underline-offset: 5px; }
     .footer-links a { min-height: 44px; display: inline-flex; align-items: center; color: #c4c8d0; font-size: 14px; text-decoration: underline; text-underline-offset: 5px; }
     .footer-links a:hover { color: #f2eee6; }
+    .download-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin: 2px 0 32px; }
+    .download-bar .arrow-button { margin: 0; text-decoration: none; }
+    .download-link { color: #c4c8d0; font-size: 15px; text-decoration: underline; text-underline-offset: 5px; }
+    .download-link:hover { color: #f2eee6; }
     .detail-example { display: grid; gap: 24px; margin-top: 64px; }
     .example-panel { padding: 32px; border: 1px solid rgba(242,238,230,.16); border-radius: 4px; background: #111a2d; }
     .example-panel h2 { margin: 0 0 16px; font: 600 24px/1.35 var(--serif); }
@@ -819,6 +823,7 @@
     </header>
     <main class="page-main">
       <div class="page-heading"><h1 id="catalog-title">按部门，<br>找到你能用的技能</h1><p>先选你所在部门，再用关键词缩小范围。11 个技能都在试点部门跑过，详情里写清了门槛、产出和复核要求。</p></div>
+      <div class="download-bar"><a class="arrow-button secondary" href="下载/卫华AI技能中心-交付包.zip" download="卫华AI技能中心-交付包.zip">全部打包下载（11 个技能 + 文档）<span class="arrow" aria-hidden="true"></span></a><a class="download-link" href="https://github.com/YGtemple/weihua-ai-skill-center/tree/main/技能包" target="_blank" rel="noopener">浏览技能包原文</a><a class="download-link" href="#submit" data-nav="submit">我们部门也有活想做成技能</a></div>
       <div class="catalog-layout">
         <aside class="category-rail" aria-label="Skill 分类">
           <button class="category-filter active" type="button" data-category="all" aria-pressed="true">全部技能<span>11</span></button>
