@@ -612,6 +612,7 @@
     .detail-command-text { font-size: 18px !important; color: #e7b66b !important; line-height: 1.9 !important; padding: 14px 18px; border-left: 2px solid rgba(231,182,107,.75); background: rgba(231,182,107,.07); border-radius: 0 10px 10px 0; }
     .detail-command-note { margin-top: 12px; font-size: 14px !important; color: #8f97a6 !important; line-height: 1.8 !important; }
     #detail-copy { margin-top: 14px; }
+    #detail-download { margin: 12px 0 0 12px; display: inline-flex; align-items: center; min-height: 44px; color: #e7b66b; text-decoration: none; border-bottom: 1px solid rgba(231,182,107,.35); }
     .category-filter[data-category="production"],.category-filter[data-category="procurement"],.category-filter[data-category="finance"] { opacity: .72; }
   </style>
 </head>
@@ -881,7 +882,7 @@
         <div class="detail-fact"><h2>怎么开始</h2><ol id="detail-steps"><li>把材料发给它。</li><li>确认范围和边界。</li><li>核对结果并留痕。</li></ol></div>
         <div class="detail-fact"><h2>你会得到</h2><p id="detail-output">一套可直接使用的结果文件。</p></div>
         <div class="detail-fact"><h2>大概省多少时间</h2><p id="detail-save">按单次任务估算，试点后校准。</p></div>
-        <div class="detail-fact"><h2>一句话叫它</h2><p id="detail-cmd" class="detail-command-text">把材料发给你，按流程做一版。</p><button class="arrow-button secondary" id="detail-copy" type="button">复制这句话<span class="arrow" aria-hidden="true"></span></button><p class="detail-command-note">复制后粘贴给豆包，按提示上传文件即可；不用改 prompt，也不用写代码。</p></div>
+        <div class="detail-fact"><h2>一句话叫它</h2><p id="detail-cmd" class="detail-command-text">把材料发给你，按流程做一版。</p><button class="arrow-button secondary" id="detail-copy" type="button">复制这句话<span class="arrow" aria-hidden="true"></span></button><a class="arrow-button secondary" id="detail-download" href="下载/卫华AI技能中心-交付包.zip" download="卫华AI技能中心-交付包.zip" aria-label="下载这个技能包">下载这个技能包<span class="arrow" aria-hidden="true"></span></a><p class="detail-command-note">复制后粘贴给豆包，按提示上传文件即可；不用改 prompt，也不用写代码。</p></div>
       </section>
       <section class="detail-example" aria-label="Skill 输入输出示例">
         <article class="example-panel"><h2>示例输入</h2><p id="detail-example-input">项目周会转写文本：讨论交付时间、预算与负责人分工。</p></article>
@@ -1275,6 +1276,7 @@
         }
         return { route:views[raw] ? raw : 'notfound', skill:'' };
       }
+      const PACKAGES = {"报名资料整理":"baoming-ziliao-zhengli","招标公告解析":"tender-notice-review","报名资料审核":"bid-doc-audit","供应商入围填报":"supplier-shortlist-filing","资料清单归档":"supplier-checklist-auto-archive","平台注册填报":"tender-platform-register","内部系统查询":"internal-system-search","宣传文案审核":"promo-video-copy-review","董事长发言稿":"chairman-speech","总裁发言稿":"president-speech","会议纪要":"weihua-meeting-minutes"};
       function updateDetail(name) {
         const data = DETAILS[name];
         document.getElementById('detail-category').textContent = `${data.dept} · ${data.status}`;
@@ -1286,6 +1288,10 @@
         document.getElementById('detail-prep').textContent = data.prep;
         document.getElementById('detail-save').textContent = `${data.save}（经验值，试点后按实际校准）`;
         document.getElementById('detail-cmd').textContent = data.cmd;
+        const dl = document.getElementById('detail-download');
+        if (dl) { const code = PACKAGES[name];
+          if (code) { dl.href = `下载/技能包/${code}.zip`; dl.setAttribute('download', `${code}.zip`); dl.hidden = false; }
+          else { dl.href = '下载/卫华AI技能中心-交付包.zip'; dl.setAttribute('download', '卫华AI技能中心-交付包.zip'); } }
         const tagBox = document.getElementById('detail-tags');
         tagBox.replaceChildren(...data.tags.map(text => { const span = document.createElement('span'); span.className = 'detail-tag'; span.textContent = text; return span; }));
         const steps = document.getElementById('detail-steps');
