@@ -1,0 +1,101 @@
+{
+  "meeting_type": "monthly",
+  "company": "卫华集团有限公司",
+  "issuer": "××",
+  "watermark": "仅供内部浏览，严禁外传",
+  "fields": [
+    {"label": "会议主题", "value": "卫华集团××年××月份重机公司例会"},
+    {"label": "会议时间", "value": "××年××月××日 ××:××—××:××"},
+    {"label": "会议地点", "value": "××"},
+    {"label": "主持人", "value": "××"},
+    {"label": "参会人员", "value": "××"},
+    {"label": "因公请假人员", "value": "××"},
+    {"label": "整理人", "value": "××"},
+    {"label": "审核人", "value": "××"}
+  ],
+  "agenda": [],
+  "sources": [
+    {"id": "S001", "required": true},
+    {"id": "S002", "required": true},
+    {"id": "S003", "required": true},
+    {"id": "S004", "required": true},
+    {"id": "S005", "required": true},
+    {"id": "S006", "required": true}
+  ],
+  "excluded_sources": [],
+  "sections": [
+    {
+      "heading": "一、主持人通报工作及指标完成情况",
+      "default_source_ids": ["S001"],
+      "blocks": [
+        {"type": "h2", "text": "××月份重点工作计划完成情况"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "h2", "text": "××月份考评数据完成情况"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "h2", "text": "××月份及累计绩效考核成绩"},
+        {"type": "item", "text": "1、××。", "level": 0}
+      ]
+    },
+    {
+      "heading": "二、各部门主管汇报工作",
+      "default_source_ids": ["S002"],
+      "blocks": [
+        {"type": "department", "text": "销售部"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "reply", "text": "总经理回复"},
+        {"type": "body", "text": "××。"},
+        {"type": "department", "text": "生产设备部"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "department", "text": "技术部"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "department", "text": "采购部"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "department", "text": "质量保障部"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "department", "text": "仓储部"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "department", "text": "安环部"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "department", "text": "财务部"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "department", "text": "行政综合部"},
+        {"type": "item", "text": "1、××。", "level": 0}
+      ]
+    },
+    {
+      "heading": "三、各分管副总经理工作安排",
+      "default_source_ids": ["S003"],
+      "blocks": [
+        {"type": "department", "text": "××"},
+        {"type": "item", "text": "1、××。", "level": 0}
+      ]
+    },
+    {
+      "heading": "四、总经理安排各部门工作",
+      "default_source_ids": ["S004"],
+      "blocks": [
+        {"type": "department", "text": "销售部"},
+        {"type": "item", "text": "1、××。", "level": 0},
+        {"type": "department", "text": "公共项安排"},
+        {"type": "item", "text": "1、××。", "level": 0}
+      ]
+    },
+    {
+      "heading": "五、集团总裁工作指导",
+      "default_source_ids": ["S005"],
+      "blocks": [
+        {"type": "h2", "text": "1、××"},
+        {"type": "body", "text": "××。"}
+      ]
+    },
+    {
+      "heading": "六、集团董事长工作指示",
+      "default_source_ids": ["S006"],
+      "blocks": [
+        {"type": "h2", "text": "1、××"},
+        {"type": "body", "text": "××。"},
+        {"type": "body", "text": "总经理对落实会议精神提出以下要求：××。", "lead": "总经理对落实会议精神提出以下要求："}
+      ]
+    }
+  ]
+}

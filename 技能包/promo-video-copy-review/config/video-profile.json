@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-11-10",
+  "description": "视频类稿件的机械参数。语速档、字幕阈值、长句阈值、超载/不足判定系数都在这里调。",
+  "speech_rates": [3.5, 4.0, 4.5],
+  "default_rate": 4.0,
+  "rate_notes": "正式场合 3.5–4 字/秒，短视频节奏 4.5–5 字/秒；字幕与口播同步时按 4 字/秒估。无口播纯字幕可放宽到 6–7 字/秒。",
+  "subtitle_max_chars_per_line": 16,
+  "long_sentence_limit": 40,
+  "duration_check": {
+    "overload_ratio": 1.2,
+    "underload_ratio": 0.7,
+    "comment": "有效字数 > 上限×overload_ratio 判超载；< 下限×underload_ratio 判严重偏少。两个方向都要查，S-001 超载、S-002 不足。"
+  },
+  "info_density": {
+    "max_points_per_seconds": 4,
+    "comment": "信息点数量 ÷ 时长 > 1个/4秒 则观众接不住"
+  },
+  "frame_pick": {
+    "count": 6,
+    "comment": "抽帧核对：开头、每 1/5 处、结尾。字幕若整段不变，说明信息密度不足。"
+  }
+}

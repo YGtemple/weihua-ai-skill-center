@@ -1,0 +1,14 @@
+{
+  "name": "招标平台自动注册填报",
+  "source": "local",
+  "version": "1.0.0",
+  "installedAt": 1762777200000,
+  "description_zh": "面向招标/采购/供应链平台的供应商注册与入库填报自动化。读取本地供应商资料库中的供方能力调查基础信息表、供应商入围资料清单、资质清单，按页面字段语义匹配填写公司基础信息与开票信息，按合并后的资质清单上传营业执照、体系证书、信用截图、财务报表、业绩合同等文件并同步填写证书有效期，全部完成后暂停并输出执行汇总报告，不自动提交。触发词：register、招标注册、供应商入库、供应商注册填报、平台入库、注册招标平台、入库资料上传。",
+  "description_en": "Automate supplier registration and onboarding form filling on tender platforms: read the local supplier library, map fields by meaning, upload qualification files listed in the merged checklist with validity dates, then produce an execution report without auto-submitting.",
+  "examples_zh": [
+    "帮我注册这个招标平台，资料从供应商资料库取",
+    "供应商入库填报，按资质清单上传证书并填有效期",
+    "把这个平台的供应商注册表填好，先别提交"
+  ],
+  "iconSource": "letter:auto"
+}

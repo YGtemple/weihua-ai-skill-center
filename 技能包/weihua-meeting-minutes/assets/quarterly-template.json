@@ -1,0 +1,107 @@
+{
+  "meeting_type": "quarterly",
+  "company": "卫华集团有限公司",
+  "issuer": "××",
+  "watermark": "仅供内部浏览，严禁外传",
+  "fields": [
+    {"label": "会议主题", "value": "卫华集团××年第××季度全员大会暨管理提升活动推进会"},
+    {"label": "会议时间", "value": "××年××月××日 ××:××—××:××"},
+    {"label": "会议地点", "value": "××"},
+    {"label": "主持人", "value": "××"},
+    {"label": "参会人员", "value": "××"},
+    {"label": "整理人", "value": "××"},
+    {"label": "审核人", "value": "××"}
+  ],
+  "agenda": [
+    "重机第××季度工作报告",
+    "重装第××季度工作报告",
+    "表彰第××季度先进个人",
+    "管理提升活动成果汇报及评优表彰",
+    "集团总裁作工作安排",
+    "集团董事长作总结讲话"
+  ],
+  "sources": [
+    {"id": "S001", "required": true},
+    {"id": "S002", "required": true},
+    {"id": "S003", "required": true},
+    {"id": "S004", "required": true},
+    {"id": "S005", "required": true},
+    {"id": "S006", "required": true}
+  ],
+  "excluded_sources": [],
+  "sections": [
+    {
+      "heading": "一、重机第××季度工作报告",
+      "default_source_ids": ["S001"],
+      "blocks": [
+        {"type": "h2", "text": "1、公司级指标完成情况"},
+        {"type": "h3", "text": "1.1 完成较好"},
+        {"type": "item", "text": "①××。", "level": 1},
+        {"type": "h3", "text": "1.2 完成较差"},
+        {"type": "item", "text": "①××。", "level": 1},
+        {"type": "h2", "text": "2、部门级指标完成情况"},
+        {"type": "body", "text": "××。"},
+        {"type": "h2", "text": "3、各部门成绩排名"},
+        {"type": "body", "text": "××。"},
+        {"type": "h2", "text": "4、第××季度工作成果"},
+        {"type": "h3", "text": "4.1 营销管理"},
+        {"type": "item", "text": "①××。", "level": 1},
+        {"type": "h2", "text": "5、工作中存在的不足"},
+        {"type": "h3", "text": "5.1 销售系统"},
+        {"type": "item", "text": "①××。", "level": 1},
+        {"type": "h2", "text": "6、下一季度工作安排"},
+        {"type": "h3", "text": "6.1 整体工作"},
+        {"type": "item", "text": "①××。", "level": 1}
+      ]
+    },
+    {
+      "heading": "二、重装第××季度工作报告",
+      "default_source_ids": ["S002"],
+      "blocks": [
+        {"type": "h2", "text": "1、公司级指标完成情况"},
+        {"type": "body", "text": "××。"},
+        {"type": "h2", "text": "2、部门级指标完成情况"},
+        {"type": "body", "text": "××。"},
+        {"type": "h2", "text": "3、各部门成绩排名"},
+        {"type": "body", "text": "××。"},
+        {"type": "h2", "text": "4、第××季度工作成果"},
+        {"type": "body", "text": "××。"},
+        {"type": "h2", "text": "5、工作中存在的不足"},
+        {"type": "body", "text": "××。"},
+        {"type": "h2", "text": "6、下一季度工作安排"},
+        {"type": "body", "text": "××。"}
+      ]
+    },
+    {
+      "heading": "三、表彰第××季度先进个人",
+      "default_source_ids": ["S003"],
+      "blocks": [
+        {"type": "item", "text": "1、××。", "level": 0}
+      ]
+    },
+    {
+      "heading": "四、“管理提升活动”成果汇报及评优表彰",
+      "default_source_ids": ["S004"],
+      "blocks": [
+        {"type": "item", "text": "1、××。", "level": 0}
+      ]
+    },
+    {
+      "heading": "五、集团总裁作工作安排",
+      "default_source_ids": ["S005"],
+      "blocks": [
+        {"type": "h2", "text": "1、××"},
+        {"type": "body", "text": "××。"}
+      ]
+    },
+    {
+      "heading": "六、集团董事长作总结讲话",
+      "default_source_ids": ["S006"],
+      "blocks": [
+        {"type": "h2", "text": "1、××"},
+        {"type": "body", "text": "××。"},
+        {"type": "body", "text": "集团董事长号召：××。", "lead": "集团董事长号召："}
+      ]
+    }
+  ]
+}
